@@ -1,0 +1,19 @@
+{% extends 'index.html' %}
+{% block title %}Movies{% endblock %}
+
+{% block content %}
+
+   {% if latest_movies_list %}
+       {% for a in latest_movies_list %}
+           <p><a href="{% url 'movies:detail' a.id %}"> {{a.movie_title}}</a></p>
+
+
+       {% endfor %}
+
+   {% else %}
+
+       Movies didn't find
+
+    {% endif %}
+
+{% endblock %}
