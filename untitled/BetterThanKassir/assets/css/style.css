@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/*
+@font-face {
+    font-family: "GeometriaBrands";
+    src: url("Q:/Kuro/MySite/fonts/GeometriaMedium.otf") format("opentype");
+    font-style: medium;
+    font-weight: medium;
+}
+*/
+
+@font-face {
+    font-family: "Geometria";
+    src: url("../fonts/Geometria.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+header {
+    position: fixed;
+    height: 30px;
+    width: 100%;
+    margin: 20px;
+    top: 0px;
+}
+
+h1 {
+    font-family: "Geometria"
+}
+
+#wwy {
+    background: url(../img/wwyC.jpg) no-repeat;
+    position: relative;    
+    margin-top: 80px;
+    background-size: cover;
+    height: 700px
+}
+
