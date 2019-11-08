@@ -4,11 +4,6 @@
     <data-source name="db" uuid="124e2460-8a02-4f63-8d70-61b645078200">
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="SQLITE" exact-version="0" />
       <auth-required>false</auth-required>
-      <schema-mapping>
-        <introspection-scope>
-          <node kind="schema" negative="1" />
-        </introspection-scope>
-      </schema-mapping>
     </data-source>
   </component>
 </project>
