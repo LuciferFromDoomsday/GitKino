@@ -39,6 +39,8 @@
   </component>
 <<<<<<< HEAD
 =======
+<<<<<<< HEAD
+=======
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
@@ -91,6 +93,7 @@
     </leaf>
   </component>
 >>>>>>> de400b85a9887f0ecbcd8e3be9eede519cf380b4
+>>>>>>> bf5a9fa91e974b4c2ec1535527de534c9670c5fd
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -103,6 +106,10 @@
     <option name="ROOT_SYNC" value="DONT_SYNC" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+<<<<<<< HEAD
+  <component name="ProjectId" id="1Sz1EPakoU774wzAQXtk87GkeNi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+=======
 <<<<<<< HEAD
   <component name="ProjectId" id="1Sz1EPakoU774wzAQXtk87GkeNi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -171,6 +178,7 @@
     </panes>
   </component>
 >>>>>>> de400b85a9887f0ecbcd8e3be9eede519cf380b4
+>>>>>>> bf5a9fa91e974b4c2ec1535527de534c9670c5fd
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -200,7 +208,27 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.manage">
+  <component name="RunManager" selected="Django tests.Test: ">
+    <configuration name="Test: " type="DjangoTestsConfigurationType" temporary="true">
+      <module name="untitled" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="admin (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="untitled" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -292,6 +320,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Django tests.Test: " />
         <item itemvalue="Python.manage" />
         <item itemvalue="Python.admin (1)" />
         <item itemvalue="Python.admin" />
@@ -314,9 +343,12 @@
       <workItem from="1572288535821" duration="10172000" />
       <workItem from="1572497674819" duration="5768000" />
       <workItem from="1572598115643" duration="1184000" />
+      <workItem from="1572602610264" duration="4769000" />
     </task>
     <servers />
   </component>
+<<<<<<< HEAD
+=======
   <component name="TimeTrackingManager">
     <option name="totallyTimeSpent" value="36584000" />
   </component>
@@ -350,6 +382,7 @@
     </layout>
   </component>
 >>>>>>> de400b85a9887f0ecbcd8e3be9eede519cf380b4
+>>>>>>> bf5a9fa91e974b4c2ec1535527de534c9670c5fd
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -381,8 +414,12 @@
     </option>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/untitled$manage.coverage" NAME="manage Coverage Results" MODIFIED="1572604180720" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled$admin.coverage" NAME="admin Coverage Results" MODIFIED="1572289413140" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/movies" />
     <SUITE FILE_PATH="coverage/untitled$admin__1_.coverage" NAME="admin (1) Coverage Results" MODIFIED="1572289423771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/BetterThanKassir" />
+<<<<<<< HEAD
+    <SUITE FILE_PATH="coverage/untitled$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1572605217024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+=======
     <SUITE FILE_PATH="coverage/untitled$manage.coverage" NAME="manage Coverage Results" MODIFIED="1572289496335" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 <<<<<<< HEAD
@@ -421,6 +458,7 @@
         </state>
       </provider>
     </entry>
+>>>>>>> bf5a9fa91e974b4c2ec1535527de534c9670c5fd
   </component>
 >>>>>>> de400b85a9887f0ecbcd8e3be9eede519cf380b4
 </project>
