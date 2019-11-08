@@ -29,6 +29,7 @@ header {
     width: 100%;
     margin: 20px;
     top: 0px;
+    display: flex;
 }
 
 h1 {
@@ -43,13 +44,44 @@ h1 {
     height: 700px;
 }
 
-#search {
-    background: url(../img/search.png);
+#search img {
     position: relative;
     width: 40px;
     height: 40px;
-    margin-left: 250px;
-    background-size: cover;
+    margin-left: 10px;
+}
+
+.h_icon{
+    height: 40px;
+    width: 40px;
+    margin-left: 50px;
+}
+
+.h_icon img {
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-size: contain; 
+}
+
+#film {
+    margin-left: 150px;
+}
+
+#film:hover .hiden{
+    position: absolute;
+    display: block;
+    top: 50px;
+    left: 435px;
+    width: 60px;
+    font-family: "Geometria";
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+    text-align: center;
+}
+
+.hiden{
+    display: none;
 }
 
 
