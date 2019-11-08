@@ -32,14 +32,24 @@ header {
 }
 
 h1 {
-    font-family: "Geometria"
+    font-family: "Geometria";
 }
 
 #wwy {
     background: url(../img/wwyC.jpg) no-repeat;
-    position: relative;    
+    position: relative;
     margin-top: 80px;
     background-size: cover;
-    height: 700px
+    height: 700px;
 }
+
+#search {
+    background: url(../img/search.png);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin-left: 250px;
+    background-size: cover;
+}
+
 
