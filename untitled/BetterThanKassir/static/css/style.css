@@ -32,6 +32,7 @@ h1 {
     font-family: "Geometria";
 }
 
+<<<<<<< HEAD
 #wwy {
     background: url(../img/wwyC.jpg) no-repeat;
     position: relative;
@@ -51,6 +52,8 @@ h1 {
 
 =======
 >>>>>>> 4c18a4e2948400c0ce4396fedb4fcccf306ed0fc
+=======
+>>>>>>> b52f121ebd95f8e108df03c602b9a872fcacec61
 .h_icon{
 
     height: 40px;
@@ -69,24 +72,13 @@ h1 {
     margin-left: 150px;
 }
 
-#film:hover .hiden{
-    position: absolute;
-    display: block;
-    top: 50px;
-    left: 435px;
-    width: 60px;
-    font-family: "Geometria";
-    background: rgb(63,94,251);
-    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
-    text-align: center;
-}
-
 .hiden{
     display: none;
 }
 
 #content {
   position: absolute;
+<<<<<<< HEAD
   height: 50px;
   width: 300px;
   margin-left: 170px;
@@ -309,3 +301,159 @@ input {
   transform: translate(-100%, -50%);
 >>>>>>> 4c18a4e2948400c0ce4396fedb4fcccf306ed0fc
 }
+=======
+  margin-left: 1480px;
+  top: 20px;
+}
+
+#content.on {
+  -webkit-animation-name: in-out;
+  animation-name: in-out;
+  -webkit-animation-duration: 0.7s;
+  animation-duration: 0.7s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+input {
+  box-sizing: border-box;
+  width: 50px;
+  height: 50px;
+  border: 4px solid black;
+  border-radius: 50%;
+  background: white;
+  color: black;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Roboto;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+    padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.8s ease-in-out,
+    padding 0.2s;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.search {
+  background: none;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 100%;
+  outline: 0;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+.search:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: black;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  margin-top: 26px;
+  margin-left: 17px;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-transition-delay: 0.4s;
+  transition-delay: 0.4s;
+}
+
+.close:before {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  margin-top: -1px;
+  margin-left: -13px;
+  background-color: white;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.close:after {
+  content: "";
+  position: absolute;
+  width: 27px;
+  height: 4px;
+  background-color: white;
+  margin-top: -1px;
+  margin-left: -13px;
+  cursor: pointer;
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.square {
+  box-sizing: border-box;
+  padding: 0 40px 0 10px;
+  width: 300px;
+  height: 50px;
+  border: 4px solid white;
+  border-radius: 0;
+  background: black;
+  color: white;
+  font-family: Geometria;
+  font-size: 16px;
+  font-weight: 400;
+  outline: 0;
+  -webkit-transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+    padding 0.2s;
+  transition: width 0.4s ease-in-out, border-radius 0.4s ease-in-out,
+    padding 0.2s;
+  -webkit-transition-delay: 0.4s, 0s, 0.4s;
+  transition-delay: 0.4s, 0s, 0.4s;
+  -webkit-transform: translate(-100%, -50%);
+  -ms-transform: translate(-100%, -50%);
+  transform: translate(-100%, -50%);
+}
+
+#wwy {
+    background: url(../img/IronMan.jpg) no-repeat;
+    position: relative;
+    margin-top: 90px;
+    background-size: cover;
+    height: 600px;
+}
+
+#imgBot{
+    position: relative;
+    top: 500px;
+    height: 70px;
+    width: 100%;
+    background: blue;
+	filter: blur(70px);
+}
+
+#ImgBot h{
+    font-family: Geometria;
+
+}
+>>>>>>> b52f121ebd95f8e108df03c602b9a872fcacec61

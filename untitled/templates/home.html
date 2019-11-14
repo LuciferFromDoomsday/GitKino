@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>MovieDreamers</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<header>
+    <h1>MovieDreamers</h1>
+    <form id="content">
+        <input class="input" id="search-input" name="input" type="text">
+        <button class="search" id="search-btn" type="reset"></button>
+    </form>
+    <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
+        <div class="hiden">Movies</div>
+    </a>
+    <a class="h_icon" href="#" id="child"><img alt="child_icon" src="{% static 'img/child.png' %}">
+        <div class="hiden">For children</div>
+    </a>
+    <a class="h_icon" href="#" id="calendar"><img alt="calendar_icon" src="{% static 'img/calendar.png' %}">
+        <div class="hiden">Coming soon</div>
+    </a>
+    <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
+        <div class="hiden">Schedule</div>
+    </a>
+</header>
+<div id="wwy">
+    <div id="ImgBot">
+        <h>PUBLISHED<p>FEB 20, 2014</p></h>
+        <h>UPDATED<p>FEB 20, 2014</p></h>
+        <h>RATING</h>
+    </div>
+</div>
+</body>
+<script src="{% static 'js/script.js' %}"></script>
+</html>
