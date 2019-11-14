@@ -5,7 +5,7 @@ from .models import Movie, Comment
 
 
 def index(request):
-    latest_movies_list = Movie.objects.order_by('movie_published_date')[:2]
+    latest_movies_list = Movie.objects.order_by('movie_published_date')[:5]
     return render(request, 'movies/list.html', {'latest_movies_list': latest_movies_list})
 
 
@@ -30,3 +30,39 @@ def leave_comment(request, movie_id):
 
     return HttpResponseRedirect( reverse('movies:detail' , args =(m.id,)))
 
+
+
+
+def movie(request, movie_id):
+    art = get_object_or_404(Article, pk=movie_id)
+    art.numberOfClicks += 1
+    art.save()
+    comments = showComments(request, movie_id)
+
+    if request.method == 'POST':
+        try:
+            txt = request.POST.get("comments_text")
+            print(request.POST)
+            comment = Comments(comments_text=txt,
+                                movie=Movie.objects.get(pk=movie_id))
+            comment.save()
+        except:
+            print('the comments cannot be added')
+    return render(request, "myFirstApp/article.html", {"article":art,
+                                                        "comments":comments})
+
+def search(request):
+    try:
+        if request.method == "POST":
+            print("Post worked ")
+            movie_description = request.POST.get("search_field")
+            if len(movie_description) > 0:
+                search_res = Movie.objects.filter(movie_title__contains=movie_description)
+                print(search_res)
+                for a in search_res:
+                    print(a.movie_title)
+                    print(a.movie_description)
+            return render(request, "movies/search.html",
+                        {"search_res": search_res, "empty_res": "There is no such movie"})
+    except:
+        return render(request, "movies/search.html",{"empty_res":"There is no such movie"})
