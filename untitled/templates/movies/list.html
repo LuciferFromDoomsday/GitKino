@@ -1,12 +1,20 @@
 {% extends 'index.html' %}
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>MovieDreamers</title>
+    <link href="{% static 'css/list.css' %}?20191113" rel="stylesheet" type="text/css">
+</head>
 {% block title %}Movies{% endblock %}
 
 {% block content %}
 
    {% if latest_movies_list %}
        {% for a in latest_movies_list %}
+            <div class="movie_block">
+                <img src="{{a.movie_picture_url}}" alt="" class="img">
            <p><a href="{% url 'movies:detail' a.id %}"> {{a.movie_title}}</a></p>
-
+            </div>
 
        {% endfor %}
 

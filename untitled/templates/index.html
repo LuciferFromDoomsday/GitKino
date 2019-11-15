@@ -1,15 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <title>{% block title %}CINEMA{% endblock %}</title>
+    <title>MovieDreamers</title>
+    <link href="{% static 'css/style.css' %}?20191114" rel="stylesheet" type="text/css">
 </head>
+
 <body>
+<header>
+    <h1>MovieDreamers</h1>
+    <form id="content">
+        <input class="input" id="search-input" name="input" type="text">
+        <button class="search" id="search-btn" type="reset"></button>
+    </form>
+    <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
+        <div class="hiden">Movies</div>
+    </a>
+    <a class="h_icon" href="#" id="child"><img alt="child_icon" src="{% static 'img/child.png' %}">
+        <div class="hiden">For children</div>
+    </a>
+    <a class="h_icon" href="#" id="calendar"><img alt="calendar_icon" src="{% static 'img/calendar.png' %}">
+        <div class="hiden">Coming soon</div>
+    </a>
+    <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
+        <div class="hiden">Schedule</div>
+        {%if messages%}
+        {%for message in messages%}
+       <div class=" alert alert-{{message.tags}}">
+           {{message}}
+       </div>
 
-{% block content %}
+        {%endfor%}
+        {%endif%}
+    </a>
+</header>
+<div class = "content">
+    {% block content %}
 
-    some text...
 {% endblock %}
-
+    </div>
+</div>
 </body>
+<script src="{% static 'js/script.js' %}"></script>
 </html>

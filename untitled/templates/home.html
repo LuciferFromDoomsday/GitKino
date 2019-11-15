@@ -4,7 +4,7 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}?20191112" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -33,6 +33,11 @@
         <h>UPDATED<p>FEB 20, 2014</p></h>
         <h>RATING</h>
     </div>
+
+    {% block content %}
+
+    some text...
+{% endblock %}
 </div>
 </body>
 <script src="{% static 'js/script.js' %}"></script>

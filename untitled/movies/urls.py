@@ -7,6 +7,7 @@ urlpatterns = [
     path('<int:movie_id>/', views.detail, name='detail'),   #/movies/1/
     path('<int:movie_id>/leave_comment/', views.leave_comment, name='leave_comment'),
 
-    path('search/', views.search, name='search')
+    path('search/', views.search, name='search'),
+path('register/' , views.register , name = 'register'), #/register
 ]
 

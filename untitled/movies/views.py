@@ -1,7 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render , redirect
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
 from .models import Movie, Comment
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib import messages
+# from .forms import TrueUser
 
 
 def index(request):
@@ -66,3 +69,16 @@ def search(request):
                         {"search_res": search_res, "empty_res": "There is no such movie"})
     except:
         return render(request, "movies/search.html",{"empty_res":"There is no such movie"})
+
+def register(request):
+    if request.method == "POST":
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            print("form is valid")
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'{username} was Born! ')
+            redirect('index.html')
+    else:
+        UserCreationForm(request.POST)
+    return render(request, 'registration/register.html', {'form': form})
+

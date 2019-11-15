@@ -15,10 +15,13 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path , include
+from movies import views as movies_views
 
 urlpatterns = [
+
     path('movies/', include('movies.urls')),
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
+    path('register/' , movies_views.register , name = 'register'),
     path('', include('homepage.urls'))
 ]
