@@ -6,6 +6,9 @@
     <img src='{{ movie.movie_picture_url }}'>
 
    <h2>{{movie.movie_title}}</h2>
+
+   <p>{{ movie.get_rating_display}}</p>
+
     <p>{{ movie.movie_description }}</p>
 
     <em>{{ movie.movie_published_date}}</em>
