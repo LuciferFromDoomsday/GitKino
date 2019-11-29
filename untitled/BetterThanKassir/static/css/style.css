@@ -42,7 +42,7 @@ h1 {
 
 #content {
   position: relative;
-  margin-left: 570px;
+  margin-left: 480px;
   top: 20px;
 }
 
@@ -194,5 +194,13 @@ input {
 
 #ImgBot h{
     font-family: Geometria;
+
+}
+
+.content{
+    margin-top: 50px;
+    width: 100%;
+    position:absolute;
+  top:100px;
 
 }

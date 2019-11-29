@@ -4,43 +4,41 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
-    <link href="{% static 'css/style.css' %}?20191114" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}?20191115" rel="stylesheet" type="text/css">
+     <link href="{% static 'css/bootstrap.css' %}?20191115" rel="stylesheet" type="text/css">
 </head>
 
 <body>
 <header>
     <h1>MovieDreamers</h1>
-    <form id="content">
-        <input class="input" id="search-input" name="input" type="text">
-        <button class="search" id="search-btn" type="reset"></button>
-    </form>
     <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
-        <div class="hiden">Movies</div>
+        <div class="hiden"></div>
     </a>
     <a class="h_icon" href="#" id="child"><img alt="child_icon" src="{% static 'img/child.png' %}">
-        <div class="hiden">For children</div>
+        <div class="hiden"></div>
     </a>
     <a class="h_icon" href="#" id="calendar"><img alt="calendar_icon" src="{% static 'img/calendar.png' %}">
-        <div class="hiden">Coming soon</div>
+        <div class="hiden"></div>
     </a>
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
-        <div class="hiden">Schedule</div>
-        {%if messages%}
-        {%for message in messages%}
-       <div class=" alert alert-{{message.tags}}">
-           {{message}}
-       </div>
-
-        {%endfor%}
-        {%endif%}
+        <div class="hiden"></div>
     </a>
+
+  <form id="content" action="{%url 'movies:search'%}"  method="post">
+        {% csrf_token %}
+        <input class="input" id="search-input" name="input" type="text" method = 'POST' placeholder="LOOKING FOR MOVIES?">
+        <button class="search" id="search-btn" type="submit" value="Search" name = "Search"></button>
+    </form>
 </header>
-<div class = "content">
+
+    <div>
+
     {% block content %}
 
+    some text...
+
 {% endblock %}
-    </div>
-</div>
+        </div>
 </body>
 <script src="{% static 'js/script.js' %}"></script>
 </html>

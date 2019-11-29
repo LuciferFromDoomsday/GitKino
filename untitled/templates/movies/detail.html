@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+
 {% block title %}{{movie.movie_title}}{% endblock %}
 
 {% block content %}
@@ -6,7 +6,7 @@
     <img src='{{ movie.movie_picture_url }}'>
 
    <h2>{{movie.movie_title}}</h2>
-    <p>{{ movie.movie_description }}</p>
+    <p>{{ movie.movie_description | safe }}</p>
 
     <em>{{ movie.movie_published_date}}</em>
     <hr>

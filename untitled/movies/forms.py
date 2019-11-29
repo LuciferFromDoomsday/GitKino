@@ -1,18 +1,15 @@
+
 from django import forms
-from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
-#from phonenumber_field.modelfields import PhoneNumberField
+from django.contrib.auth.models import User
 
 
+class SignUpForm(UserCreationForm):
+  email = forms.EmailField(max_length=254, help_text='Это поле обязательно')
 
-class TrueUser(UserCreationForm):
-
-    email = forms.EmailField()
-    #phone = PhoneNumberField(null=False, blank=False, unique=True)
-
-    class Meta():
-        model = User
-        fields = ['username',' email',  'password', 'password1']
+  class Meta:
+    model = User
+    fields = ('username', 'email', 'password1', 'password2', )
 
 
 
