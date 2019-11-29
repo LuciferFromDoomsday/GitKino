@@ -1,10 +1,11 @@
-{% extends "home.html"%}
+
 
 {% block content %}
+
   {% if search_res %}
   <br>
     We found a movie!
-    {% for movie in search_res%}
+    {% for movie in search_res %}
       <ol>
         <li value="{{forloop.counter}}">
           <a href="{% url 'movies:movie' movie.id %}">
@@ -16,5 +17,6 @@
       {%endfor%}
     {% else %}
       {{empty_res}}
+
     {% endif %}
 {% endblock%}

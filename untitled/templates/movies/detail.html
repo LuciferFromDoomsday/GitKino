@@ -1,4 +1,4 @@
-{% extends 'index.html' %}
+
 {% block title %}{{movie.movie_title}}{% endblock %}
 
 {% block content %}
@@ -7,9 +7,13 @@
 
    <h2>{{movie.movie_title}}</h2>
 
+    <p>{{ movie.movie_description | safe }}</p>
+
+
    <p>{{ movie.get_rating_display}}</p>
 
     <p>{{ movie.movie_description }}</p>
+
 
     <em>{{ movie.movie_published_date}}</em>
     <hr>

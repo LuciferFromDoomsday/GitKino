@@ -6,6 +6,7 @@ from django.db import models
 from django.utils import timezone
 
 class Movie(models.Model):
+
     NOT_RATED = 0
     RATED_G = 1
     RATED_PG = 2
@@ -29,11 +30,10 @@ class Movie(models.Model):
 
     movie_description = models.TextField('Movie Description')
 
-    movie_premiere = models.DateTimeField('Premiere date')
-
     movie_published_date = models.DateTimeField('published date')
 
-    movie_picture_url = models.CharField('movie_picture_url',max_length=200)
+    movie_genre = models.CharField('Movie genres', max_length=200)
+
 
 
 
@@ -44,6 +44,33 @@ class Movie(models.Model):
         return self.movie_published_date >= (timezone.now() - datetime.timedelta(days = 7))
 
 
+
+
+class Cities(models.Model):
+    name = models.CharField('City',max_length=25)
+    tag = models.CharField('tag',max_length=25)
+
+
+class Cinema(models.Model):
+    city_id = models.ForeignKey(Cities,on_delete= models.CASCADE)
+    cinema_name = models.CharField('City',max_length=25)
+    cinema_adress = models.CharField('City',max_length=50)
+
+
+class Ticket(models.Model):
+    ticket_name = models.CharField('Ticket name',max_length=20)
+    ticket_sum = models.IntegerField('Ticket price')
+
+
+
+class Sessions(models.Model):
+    film_id = models.ForeignKey(Movie,on_delete= models.CASCADE)
+    cinema_id = models.ForeignKey(Cinema,on_delete= models.CASCADE)
+    ticket_type = models.ForeignKey(Ticket,on_delete=models.CASCADE)
+
+    session_date = models.DateField('Session_date')
+    session_time = models.TimeField('Session_time')
+    session_hall = models.IntegerField('Session hall')
 
 
 
@@ -58,6 +85,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.author_name
+
 
 
 

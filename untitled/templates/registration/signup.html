@@ -1,0 +1,101 @@
+
+{% block content %}
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <title>MovieDreamers</title>
+  	<meta name="description" content="Free Bootstrap 4 Template by uicookies.com">
+		<meta name="keywords" content="Free website templates, Free bootstrap themes, Free template, Free bootstrap, Free website template">
+
+    <link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600|Montserrat:200,300,400" rel="stylesheet">
+
+		<link rel="stylesheet" href="{% static 'register_page/css/bootstrap/bootstrap.css'%}">
+    <link rel="stylesheet" href="{% static 'register_page/fonts/ionicons/css/ionicons.min.css'%}">
+    <link rel="stylesheet" href="{% static 'register_page/fonts/law-icons/font/flaticon.css'%}">
+
+    <link rel="stylesheet" href="{% static 'register_page/fonts/fontawesome/css/font-awesome.min.css'%}">
+
+
+    <link rel="stylesheet" href="{% static 'register_page/css/slick.css'%}">
+    <link rel="stylesheet" href="{% static 'register_page/css/slick-theme.css'%}">
+
+    <link rel="stylesheet" href="{% static 'register_page/css/helpers.css'%}">
+    <link rel="stylesheet" href="{% static 'register_page/css/style.css'%}">
+    <link rel="stylesheet" href="{% static 'register_page/css/landing-2.css'%}">
+    <link href="{% static 'css/style.css' %}?20191115" rel="stylesheet" type="text/css">
+     <link href="{% static 'css/bootstrap.css' %}?20191115" rel="stylesheet" type="text/css">
+</head>
+<section class="pb_cover_v3 overflow-hidden cover-bg-indigo cover-bg-opacity text-left pb_gradient_v1 pb_slant-light" id="section-home">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-6">
+            <h2 class="heading mb-3">Fly makes you faster</h2>
+            <div class="sub-heading">
+              <p class="mb-4">New free template by <a href="http://uicookies.com" target="_blank">uicookies.com</a>. For more templates visit the <a href="http://uicookies.com" target="_blank">site</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+              <p class="mb-5"><a class="btn btn-success btn-lg pb_btn-pill smoothscroll" href="#section-pricing"><span class="pb_font-14 text-uppercase pb_letter-spacing-1">See Pricing</span></a></p>
+            </div>
+          </div>
+          <div class="col-md-1">
+          </div>
+          <div class="col-md-5 relative align-self-center">
+
+            <form action="#" class="bg-white rounded pb_form_v1">
+              <h2 class="mb-4 mt-0 text-center">Sign Up for Free</h2>
+              <div class="form-group">
+                <input type="text" class="form-control pb_height-50 reverse" placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control pb_height-50 reverse" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control pb_height-50 reverse" placeholder="Email">
+              </div>
+              <div class="form-group">
+                <div class="pb_select-wrap">
+                  <select class="form-control pb_height-50 reverse">
+                    <option value="" selected>Type</option>
+                    <option value="">Basic</option>
+                    <option value="">Business</option>
+                    <option value="">Free</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-primary btn-lg btn-block pb_btn-pill  btn-shadow-blue" value="Register">
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </section>
+<h2>Регистрация</h2>
+<form method="post">
+{% csrf_token %}
+{% for field in form %}
+<p>
+  {{ field.label_tag }}<br>
+  {{ field }}
+  {% if field.help_text %}
+  <span>{{ field.help_text }}</span>
+  {% endif %}
+  {% for error in field.errors %}
+  <p>{{ error }}</p>
+  {% endfor %}
+</p>
+{% endfor %}
+<button type="submit">Отправить</button>
+</form>
+
+
+
+
+<p><strong><img alt="" src="https://ticketon.kz/media/upload/12847u30705_richard-proshchaetsya.jpg" style="margin-left: 10px; margin-right: 10px; float: left; width: 250px; height: 370px;" />Год:</strong> 2018</p> <p><strong>Страна производства:&nbsp;</strong>США</p> <p><strong>Режиссер:</strong> Уэйн Робертс&nbsp;</p> <p><strong>Сценарий:&nbsp;</strong>Уэйн Робертс</p> <p><strong>Актеры: </strong>Джонни Депп, Розмари ДеУитт, Одесса Янг, Дэнни Хьюстон, Зои Дойч, Девон Террелл, Рон Ливингстон</p> <p><strong>Жанр:&nbsp;</strong>драма, комедия</p> <p><strong>Продолжительность:</strong> 90 мин.</p> <p><strong>Ограничение по возрасту:</strong>&nbsp;с 16 лет</p> <p><strong>Премьера: </strong>5 декабря 2019</p> <p>&nbsp;</p> <p>Как и многие Ричард откладывал свою жизнь на потом. Важнее была карьера преподавателя в университете и другие ценности. Но теперь у него нет этого &laquo;потом&raquo; потому что ему осталось жить в лучшем случае полгода. Он отменяет все правила и запреты и наконец-то начинает жить на полную катушку.</p>
+
+
+{% endblock %}
+
+
+
+
+
