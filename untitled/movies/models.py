@@ -8,6 +8,7 @@ from django.utils import timezone
 class Movie(models.Model):
 
 
+
     movie_title = models.CharField('Movie title',max_length=200)
 
     movie_imdb = models.FloatField('IMDB score')
