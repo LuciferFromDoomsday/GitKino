@@ -24,5 +24,6 @@ urlpatterns = [
     path('grappelli/', include('grappelli.urls')), # grappelli URLS
     path('admin/', admin.site.urls),
     path('signup/' , movies_views.signup , name = 'signup'),
+    path('login/' , movies_views.log_in , name = 'log_in'),
     path('', include('homepage.urls'))
 ]

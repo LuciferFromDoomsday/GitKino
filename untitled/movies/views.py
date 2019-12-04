@@ -38,26 +38,11 @@ def leave_comment(request, movie_id):
 
 
 
-def movie(request, movie_id):
-    art = get_object_or_404(Article, pk=movie_id)
-    art.numberOfClicks += 1
-    art.save()
-    comments = showComments(request, movie_id)
 
-    if request.method == 'POST':
-        try:
-            txt = request.POST.get("comments_text")
-            print(request.POST)
-            comment = Comments(comments_text=txt,
-                                movie=Movie.objects.get(pk=movie_id))
-            comment.save()
-        except:
-            print('the comments cannot be added')
-    return render(request, "myFirstApp/article.html", {"article":art,
-                                                        "comments":comments})
 
 def search(request):
-    try:
+    
+        search_res = []
         if request.method == "POST":
             print("Post worked ")
             movie_description = request.POST.get("input")
@@ -65,10 +50,10 @@ def search(request):
             if len(movie_description) > 0:
                 search_res = Movie.objects.filter(movie_title__contains=movie_description)
                 print(search_res)
+                print(search_res[0].movie_imdb)
             return render(request, "movies/search.html",
-                        {"search_res" : search_res ,  "empty_res":"There is no such movie"})
-    except:
-        return render(request, "movies/search.html",{ "empty_res":"There is no such movie"})
+                        {"search_res" : search_res , "empty_res":"There is no such movie1"})
+
 
 
 def signup(request):
@@ -80,10 +65,29 @@ def signup(request):
     my_password = form.cleaned_data.get('password1')
     user = authenticate(username=username, password=my_password)
     login(request, user)
-    return redirect('home.html')
+    return render(request, 'home.html', {'user':user})
   else:
     form = SignUpForm()
     return render(request, 'registration/signup.html', {'form': form})
+  
+  
 
+def log_in(request):
+        print("LOGED")
+        username = request.POST.get("username")
+        my_password = request.POST.get("pass")
+        user = authenticate(username=username, password1=my_password)
+        if user is not None:
+            print("cond 1")
+            if user.is_active:
+                login(request,user)
+                print("cond 2")
+                return redirect('home.html')
+            else:
+                print("else 2")
+                return render(request, 'registration/login.html')
+        else:
+              print("else 1")
+              return render(request , 'registration/login.html' )
 
 
