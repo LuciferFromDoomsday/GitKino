@@ -60,6 +60,7 @@ def signup(request):
   if request.method == 'POST':
     form = SignUpForm(request.POST)
     if form.is_valid():
+
         form.save()
     username = form.cleaned_data.get('username')
     my_password = form.cleaned_data.get('password1')
@@ -74,9 +75,12 @@ def signup(request):
 
 def log_in(request):
         print("LOGED")
+
         username = request.POST.get("username")
         my_password = request.POST.get("pass")
-        user = authenticate(username=username, password1=my_password)
+        print(username)
+        print(my_password)
+        user = authenticate(username=username, password=my_password)
         if user is not None:
             print("cond 1")
             if user.is_active:
