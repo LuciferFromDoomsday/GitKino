@@ -24,6 +24,7 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
+
     <a href="{%url 'movies:profile'%}"> {% block login %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
@@ -34,6 +35,7 @@
 {% endif %}
 {% endblock %}
 </a>
+
 
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
