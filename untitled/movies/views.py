@@ -6,6 +6,8 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import SignUpForm
 from django.contrib.auth import authenticate, login
+from django.core.mail import send_mail
+from django.conf import settings
 
 def index(request):
     latest_movies_list = Movie.objects.order_by('movie_published_date')[:12]

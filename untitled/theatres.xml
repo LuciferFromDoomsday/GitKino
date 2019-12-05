@@ -1,0 +1,326 @@
+<theatres>
+<theatre id="1">
+<name>Иллюзион Максима</name>
+<remark/>
+<address>
+г. Алматы, пр. Райымбека, 239 "г", ТРК "Maxima", 3 этаж
+</address>
+<city>1</city>
+<cinema_id>59</cinema_id>
+<last_request_ts>1573800603</last_request_ts>
+</theatre>
+<theatre id="2">
+<name>Chaplin ADK</name>
+<remark/>
+<address>
+г. Алматы, ул. Сатпаева, 90 (уг. ул. Тлендиева), ТРК "АDК", 2-й этаж
+</address>
+<city>1</city>
+<cinema_id>91</cinema_id>
+<last_request_ts>1573757420</last_request_ts>
+</theatre>
+<theatre id="7">
+<name>SilkWayCity 3D</name>
+<remark/>
+<address>
+г. Алматы, пр. Толе би 71, гипермаркет "Silk Way City", 2 этаж
+</address>
+<city>1</city>
+<cinema_id>31</cinema_id>
+<last_request_ts>1573800654</last_request_ts>
+</theatre>
+<theatre id="45">
+<name>Жібек жолы 3D</name>
+<remark/>
+<address>
+г. Кызылорда, ул. Баитурсынова 49, ТРЦ "Жібек жолы", 3-этаж, Киноцентр "Жібек жолы"
+</address>
+<city>8</city>
+<cinema_id>94</cinema_id>
+<last_request_ts>1573800663</last_request_ts>
+</theatre>
+<theatre id="50">
+<name>Арман 3D</name>
+<remark/>
+<address>г. Алматы, пр. Достык, 104</address>
+<city>1</city>
+<cinema_id>14</cinema_id>
+<last_request_ts>1573800673</last_request_ts>
+</theatre>
+<theatre id="106">
+<name>Chaplin MEGA RealD 3D</name>
+<remark/>
+<address>г. Алматы, ул. Сейфуллина, уг.ул.Макатаева</address>
+<city>1</city>
+<cinema_id>122</cinema_id>
+<last_request_ts>1573800678</last_request_ts>
+</theatre>
+<theatre id="142">
+<name>Иртыш Синема 3D</name>
+<remark/>
+<address>г. Павлодар, ул. Каирбаева,70</address>
+<city>9</city>
+<cinema_id>56</cinema_id>
+<last_request_ts>1573791721</last_request_ts>
+</theatre>
+<theatre id="169">
+<name>CINEMAX Dostyk Plaza</name>
+<remark/>
+<address>
+г. Алматы, Самал-2, пр.Достык 111, уг.ул. Жолдасбекова, ТРЦ Dostyk Plaza
+</address>
+<city>1</city>
+<cinema_id>119</cinema_id>
+<last_request_ts>1573800729</last_request_ts>
+</theatre>
+<theatre id="248">
+<name>LUMIERA Cinema</name>
+<remark>
+<p> В Алматы начал свою работу новый 6-ти зальный кинотеатр LUMIERA miniplex. Кинотеатр расположен в историческом центре города Алматы в здании ТД «ЦУМ» на перекресте проспекта Абылай хана и улицы Жибек жолы/ «Арбат». </p> <p> Кинотеатр полностью спланирован и возведен на 6-ти уровнях с широким и вместительным фойе. Автором проекта является ведущее немецкое архитектурное бюро в области проектирования кинотеатральных и концертных комплексов по всему миру AtelierAchatzArchitekten. </p> <p> Сама задумка архитектора заключалась в том, чтобы воочию воплотить идею уютного, компактного кинотеатра с удобным расположением залов и фойе. И поэтому использовано много теплого спокойного света и иллюминаций, которые были специально подобраны в Европе самим архитектором. </p> <p> Реализация проекта заняла 7 месяцев. И вот сегодня кинотеатр открывает свои двери посетителю. Это качественный, современный, удобный и самое главное, в ценовом сегменте – недорогой кинотеатр для жителей и гостей города Алматы. </p> <p> Площадь здания кинотеатра – 6 000 квадратных метров. Вместительность залов – 916 мест. Средняя стоимость билетов будет в районе 1000 тенге. </p> <p> Цель кинотеатра LUMIERA miniplex – внести свой вклад в осуществление правильных принципов предоставления услуг, таких как: сервис, недорогой коммерческий кинопрокат, организация и проведение кинофестивалей, прокат интеллектуальных и образовательных программ для школьников и молодежи. Для достижения этих целей, конечно будем вплотную консультироваться с городским и районным акиматами в части поддержки проката и перевода на государственный язык обучающих программ, таких как, уроки астрономии/биологии/географии в 3D. </p>
+</remark>
+<address>г. Алматы, пр. Абылай хана, 62, «Арбат»</address>
+<city>1</city>
+<cinema_id>140</cinema_id>
+<last_request_ts>1573800918</last_request_ts>
+</theatre>
+<theatre id="274">
+<name>Цезарь 3D</name>
+<remark/>
+<address>г. Алматы, ул. Фурманова, 50, угол ул. Гоголя</address>
+<city>1</city>
+<cinema_id>26</cinema_id>
+<last_request_ts>1573800914</last_request_ts>
+</theatre>
+<theatre id="298">
+<name>Festival Cinema</name>
+<remark/>
+<address>
+г. Павлодар, ул. Камзина 67/1, 2 этаж, ТРЦ "Batyr mall"
+</address>
+<city>9</city>
+<cinema_id>125</cinema_id>
+<last_request_ts>1573800948</last_request_ts>
+</theatre>
+<theatre id="302">
+<name>Saryarka Cinema</name>
+<remark/>
+<address>г. Караганда, пр. Строителей 6</address>
+<city>6</city>
+<cinema_id>52</cinema_id>
+<last_request_ts>1573791911</last_request_ts>
+</theatre>
+<theatre id="327">
+<name>Cinemax Shymkent</name>
+<remark/>
+<address>
+г. Шымкент, пл. Аль-Фараби, 3/1, ТРЦ Shymkent Plaza
+</address>
+<city>11</city>
+<cinema_id>143</cinema_id>
+<last_request_ts>1573752272</last_request_ts>
+</theatre>
+<theatre id="380">
+<name>SaryZhaylau Cinema</name>
+<remark/>
+<address>
+г. Караганда, пр.Бухар жырау, 32 в здании Дворца культуры горняков, правое крыло
+</address>
+<city>6</city>
+<cinema_id>88</cinema_id>
+<last_request_ts>1573721705</last_request_ts>
+</theatre>
+<theatre id="415">
+<name>Chaplin Mega Silk Way</name>
+<remark/>
+<address>
+г. Нур-Султан, ТРЦ MEGA Silk Way (территория EXPO), 2 этаж
+</address>
+<city>2</city>
+<cinema_id>144</cinema_id>
+<last_request_ts>1573745127</last_request_ts>
+</theatre>
+<theatre id="486">
+<name>Арман 3D (ТРЦ МART)</name>
+<remark/>
+<address>г. Алматы, ул. Рихарда Зорге, 18 (р-он Алматы I)</address>
+<city>1</city>
+<cinema_id>103</cinema_id>
+<last_request_ts>1573801314</last_request_ts>
+</theatre>
+<theatre id="519">
+<name>Кинотеатр "Arsenal" Астана</name>
+<remark/>
+<address>г. Нур-Султан, Ы. Алтынсарина, 4</address>
+<city>2</city>
+<cinema_id>36</cinema_id>
+<last_request_ts>1573801274</last_request_ts>
+</theatre>
+<theatre id="520">
+<name>Астана парк Тараз 3D</name>
+<remark/>
+<address>г. Тараз, ул. Толе Би, 63</address>
+<city>13</city>
+<cinema_id>118</cinema_id>
+<last_request_ts>1573725473</last_request_ts>
+</theatre>
+<theatre id="524">
+<name>SaryArka Cinema Tair</name>
+<remark/>
+<address>г. Караганда, ул. Космонавтов 1В, ТГ "Таир"</address>
+<city>6</city>
+<cinema_id>147</cinema_id>
+<last_request_ts>1573789625</last_request_ts>
+</theatre>
+<theatre id="532">
+<name>Zodiac Cinema</name>
+<remark/>
+<address>г. Костанай, ул. Гагарина 193</address>
+<city>7</city>
+<cinema_id>148</cinema_id>
+<last_request_ts>1573801384</last_request_ts>
+</theatre>
+<theatre id="535">
+<name>Кинотеатр "Атамекен cinema"</name>
+<remark/>
+<address>г. Талдыкорган, ул. Кабанбай-батыра, 54</address>
+<city>12</city>
+<cinema_id>93</cinema_id>
+<last_request_ts>1573801388</last_request_ts>
+</theatre>
+<theatre id="602">
+<name>Sary Arka cinema (Майкудук)</name>
+<remark/>
+<address>
+г. Караганды, 15 мкр., 27А (район магазина "Горняк")
+</address>
+<city>6</city>
+<cinema_id>150</cinema_id>
+<last_request_ts>1573789755</last_request_ts>
+</theatre>
+<theatre id="611">
+<name>Premier Kazakhstan в г. Тараз</name>
+<remark/>
+<address>г. Тараз, пр. Абая, 111</address>
+<city>13</city>
+<cinema_id>151</cinema_id>
+<last_request_ts>1573628267</last_request_ts>
+</theatre>
+<theatre id="612">
+<name>"Chaplin Khan Shatyr" в Астане</name>
+<remark/>
+<address>
+г. Нур-Султан, пр. Туран 37, ТРЦ «Хан Шатыр», 2 этаж
+</address>
+<city>2</city>
+<cinema_id>80</cinema_id>
+<last_request_ts>1573801502</last_request_ts>
+</theatre>
+<theatre id="659">
+<name>Комсомолец 3D</name>
+<remark/>
+<address>г. Темиртау, пр. Республики, 45</address>
+<city>14</city>
+<cinema_id>40</cinema_id>
+<last_request_ts>1573653490</last_request_ts>
+</theatre>
+<theatre id="663">
+<name>Кинотеатр Broadway</name>
+<remark/>
+<address>г. Бишкек, пр. Чингиза Айтматова, 3</address>
+<city>26</city>
+<cinema_id>154</cinema_id>
+<last_request_ts>1573801455</last_request_ts>
+</theatre>
+<theatre id="705">
+<name>Арман 3D (Азия Парк) Нур-Султан</name>
+<remark/>
+<address>г. Нур-Султан, левый берег, ТРЦ «ASIA PARK»</address>
+<city>2</city>
+<cinema_id>92</cinema_id>
+<last_request_ts>1573801572</last_request_ts>
+</theatre>
+<theatre id="759">
+<name>Кинотеатр "Евразия Cinema7"</name>
+<remark/>
+<address>г. Нур-Султан, ул. Петрова, д.24, ТЦ "Евразия"</address>
+<city>2</city>
+<cinema_id>146</cinema_id>
+<last_request_ts>1573801639</last_request_ts>
+</theatre>
+<theatre id="896">
+<name>Киноцентр Арман (ТРЦ Asia Park)</name>
+<remark/>
+<address>г. Алматы, ул. Ташкентская, 514 А, уг. ул. Саина</address>
+<city>1</city>
+<cinema_id>139</cinema_id>
+<last_request_ts>1573801648</last_request_ts>
+</theatre>
+<theatre id="946">
+<name>Bekmambetov Cinema</name>
+<remark>
+г. Алматы, ул. Абая, 109 В, уг. ул. Ауэзова, МФК «Globus» 2-й этаж
+</remark>
+<address>г. Алматы, ул. Абая, 109 В</address>
+<city>1</city>
+<cinema_id>82</cinema_id>
+<last_request_ts>1573742023</last_request_ts>
+</theatre>
+<theatre id="958">
+<name/>
+<remark/>
+<address>
+Жамбылская область, Меркенский район, село Мерке, улица Торгаева, 1К, Торговый дом "ММ Мерке", 3 этаж
+</address>
+<city>35</city>
+<cinema_id>156</cinema_id>
+<last_request_ts>1573749197</last_request_ts>
+</theatre>
+<theatre id="1012">
+<name>Объект</name>
+<remark/>
+<address>г. Актобе, ул. Валиханова, 35</address>
+<city>5</city>
+<cinema_id>48</cinema_id>
+<last_request_ts>1573760263</last_request_ts>
+</theatre>
+<theatre id="1101">
+<name>Chaplin Mega</name>
+<remark/>
+<address>г. Алматы, ул. Розыбакиева, 247а</address>
+<city>1</city>
+<cinema_id>49</cinema_id>
+<last_request_ts>1573801772</last_request_ts>
+</theatre>
+<theatre id="1112">
+<name>Объект</name>
+<remark/>
+<address/>
+<city>42</city>
+<cinema_id>166</cinema_id>
+<last_request_ts>1573760366</last_request_ts>
+</theatre>
+<theatre id="1242">
+<name/>
+<remark/>
+<address/>
+<city>29</city>
+<cinema_id>0</cinema_id>
+<last_request_ts>1573745820</last_request_ts>
+</theatre>
+<theatre id="1255">
+<name/>
+<remark/>
+<address>г. Семей, ул. Танирбергенова, 3 а</address>
+<city>18</city>
+<cinema_id>168</cinema_id>
+<last_request_ts>1573633965</last_request_ts>
+</theatre>
+<theatre id="1306">
+<name>Компания по организации квестов</name>
+<remark/>
+<address>г. Алматы, мкр. Аксай 3а , 91</address>
+<city>1</city>
+<cinema_id>0</cinema_id>
+<last_request_ts>1567760402</last_request_ts>
+</theatre>
+</theatres>

@@ -16,6 +16,11 @@ import os , sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PROJECT_ROOT =os.path.dirname(__file__)
+#gmail send verification
+EMAIL_USE_TLS =True
+EMAIL_HOST_USER = "MovieDreamers@gmail.com"
+EMAIL_PORT = 587
+
 
 
 # Quick-start development settings - unsuitable for production
