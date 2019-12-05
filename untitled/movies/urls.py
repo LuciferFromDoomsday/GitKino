@@ -13,7 +13,8 @@ urlpatterns = [
 path('signup/' , views.signup , name = 'signup'), #/register
 path('login/' , views.log_in , name = 'log_in') #/login,
     ,
-path('profile/' , views.profile , name = 'profile')
+path('profile/' , views.profile , name = 'profile'),
+path('logout/' , views.my_logout , name = 'my_logout')
     
 ]
 
