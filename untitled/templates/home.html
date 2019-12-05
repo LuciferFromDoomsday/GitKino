@@ -8,10 +8,6 @@
 
     <link href="{% static 'css/style.css'%}?20191205" rel="stylesheet" type="text/css">
 
-    <link href="{% static 'css/style.css'?20191205 %}" rel="stylesheet" type="text/css">
-
-    <link href="{% static 'css/style.css' %}?20191205" rel="stylesheet" type="text/css">
-    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
 
 
 </head>
@@ -32,7 +28,7 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
-    <a href=""> {% block login %}
+    <a href="">
 
     <a href="{%url 'movies:profile'%}"> {% block login %}
 {% if user.is_authenticated %}
@@ -44,24 +40,13 @@
 {% endif %}
 {% endblock %}
 </a>
-
-    <a href="{%url 'movies:profile'%}"> {% block login %}
-{% if user.is_authenticated %}
-  Hi {{ user.username }}!
-  <p><a href="{% url 'movies:my_logout' %}">logout</a></p>
-{% else %}
-  <p>You are not logged in</p>
-  <a href="{% url 'login' %}">login</a>
-{% endif %}
-{% endblock %}
-</a>
-
-
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
         <input class="input" id="search-input" name="input" type="text" method = 'POST' placeholder="LOOKING FOR MOVIES?">
         <button class="search" id="search-btn" type="submit" value="Search" name = "Search"></button>
     </form>
+
+    </a>
 </header>
 <div id="wwy">
     <div id="ImgBot">
