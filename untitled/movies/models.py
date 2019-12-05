@@ -59,10 +59,6 @@ class Sessions(models.Model):
 
 
 
-
-
-
-
 class Comment(models.Model):
     movie = models.ForeignKey(Movie,on_delete= models.CASCADE) #CASECADE delete all comments when movie will be deleted
     author_name = models.CharField('Author of comment',max_length=50)
