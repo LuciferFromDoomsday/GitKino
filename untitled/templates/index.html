@@ -24,6 +24,27 @@
         <div class="hiden"></div>
     </a>
 
+    {%block login%}
+                {% if user.is_authenticated%}
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <a href="{% url 'logout' %}"> Logout </a>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <a href="{% url 'myFirstApp:profile' %}">{{user.username}}</a>
+                </ul>
+
+                {%else%}
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                      <a href="{% url 'login'%}">Login</a>
+                    </li>
+                    <li><a href="{% url 'myFirstApp:registration'%}"> Registration </a> </li>
+                </ul>
+                {%endif%}
+                {%endblock%}
+
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
         <input class="input" id="search-input" name="input" type="text" method = 'POST' placeholder="LOOKING FOR MOVIES?">

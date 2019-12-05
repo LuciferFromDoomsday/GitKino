@@ -10,6 +10,8 @@ urlpatterns = [
     path('<int:movie_id>/leave_comment/', views.leave_comment, name='leave_comment'),
 
     path('search/', views.search, name='search'),
-path('signup/' , views.signup , name = 'signup') #/register
+path('signup/' , views.signup , name = 'signup'), #/register
+path('login/' , views.log_in , name = 'log_in') #/login
+    
 ]
 

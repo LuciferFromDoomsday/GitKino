@@ -8,15 +8,15 @@
     {% for movie in search_res %}
       <ol>
         <li value="{{forloop.counter}}">
-          <a href="{% url 'movies:movie' movie.id %}">
+          <a href="{% url 'movies:detail' movie.id %}">
           <p>{{movie.movie_title}}</p>
         </a>
-        {{movie.movie_description|truncatewords:10}}
+
         </li>
       </ol>
       {%endfor%}
-    {% else %}
-      {{empty_res}}
+  {% else %}
+    {{empty_res}}
 
-    {% endif %}
+  {% endif %}
 {% endblock%}
