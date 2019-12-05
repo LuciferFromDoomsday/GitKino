@@ -27,8 +27,11 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
+
+    <a href="">
 <!--    <a href="">-->
         {% block login %}
+
 
     <a href="{%url 'movies:profile'%}">
 {% if user.is_authenticated %}
@@ -41,12 +44,13 @@
 {% endblock %}
 </a>
 
-
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
         <input class="input" id="search-input" name="input" type="text" method = 'POST' placeholder="LOOKING FOR MOVIES?">
         <button class="search" id="search-btn" type="submit" value="Search" name = "Search"></button>
     </form>
+
+    </a>
 </header>
 <div id="wwy">
     <div id="ImgBot">

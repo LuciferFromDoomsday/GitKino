@@ -37,7 +37,7 @@ class Cities(models.Model):
 
 
 class Cinema(models.Model):
-    city_id = models.ForeignKey(Cities,on_delete= models.CASCADE)
+    city_id = models.IntegerField('city_id')
     cinema_name = models.CharField('City',max_length=25)
     cinema_adress = models.CharField('City',max_length=50)
 
@@ -49,13 +49,12 @@ class Ticket(models.Model):
 
 
 class Sessions(models.Model):
-    film_id = models.ForeignKey(Movie,on_delete= models.CASCADE)
-    cinema_id = models.ForeignKey(Cinema,on_delete= models.CASCADE)
-    ticket_type = models.ForeignKey(Ticket,on_delete=models.CASCADE)
+    film_id = models.IntegerField("film_id_for_session")
+    cinema_id = models.IntegerField("cinema_id_for_session")
 
-    session_date = models.DateField('Session_date')
-    session_time = models.TimeField('Session_time')
-    session_hall = models.IntegerField('Session hall')
+    session_date = models.CharField('Session_date', max_length=30)
+    session_time = models.CharField('Session_time', max_length=30)
+    session_hall = models.CharField('Session hall',max_length=30)
 
 
 
