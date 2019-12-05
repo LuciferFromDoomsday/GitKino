@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="067e6074-158d-4976-8481-f8454f1d669b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GitKino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GitKino.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,6 +70,7 @@
       <option name="presentableId" value="Default" />
       <updated>1572604832978</updated>
       <workItem from="1572604848914" duration="898000" />
+      <workItem from="1575021758269" duration="2500000" />
     </task>
     <servers />
   </component>

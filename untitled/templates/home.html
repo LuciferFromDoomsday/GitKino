@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
     <link href="{% static 'css/style.css' %}?20191205" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -25,6 +26,8 @@
         <div class="hiden"></div>
     </a>
     <a href=""> {% block login %}
+
+    <a href="{%url 'movies:profile'%}"> {% block login %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
