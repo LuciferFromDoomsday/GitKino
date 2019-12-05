@@ -31,7 +31,7 @@ def leave_comment(request, movie_id):
     except:
         raise Http404("No such movie")
 
-    m.comment_set.create(author_name= request.POST['name'] , comment_text=request.POST['text'])
+    m.comment_set.create(author_name= user.username , comment_text=request.POST['text'])
 
     return HttpResponseRedirect( reverse('movies:detail' , args =(m.id,)))
 
@@ -95,3 +95,5 @@ def log_in(request):
               return render(request , 'registration/login.html' )
 
 
+def profile(request):
+    return render(request, "registration/user_profile.html")
