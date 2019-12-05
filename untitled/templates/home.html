@@ -11,10 +11,9 @@
 
 
 </head>
-
 <body>
 {% csrf_token %}
-<header>
+<header id="head">
     <h1>MovieDreamers</h1>
     <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
         <div class="hiden"></div>
@@ -28,9 +27,14 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
+
     <a href="">
 
-    <a href="{%url 'movies:profile'%}"> {% block login %}
+<!--    <a href="">-->
+        {% block login %}
+
+
+    <a href="{%url 'movies:profile'%}">
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
   <p><a href="{% url 'logout' %}">logout</a></p>
@@ -40,6 +44,7 @@
 {% endif %}
 {% endblock %}
 </a>
+
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
         <input class="input" id="search-input" name="input" type="text" method = 'POST' placeholder="LOOKING FOR MOVIES?">

@@ -1,14 +1,18 @@
 <html>
 
 <head>
+
     {% load static %}
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
-    <link href="{% static 'css/style.css' %}?20191115" rel="stylesheet" type="text/css">
-     <link href="{% static 'css/bootstrap.css' %}?20191115" rel="stylesheet" type="text/css">
-</head>
 
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
+
+
+
+</head>
 <body>
+{% csrf_token %}
 <header>
     <h1>MovieDreamers</h1>
     <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
@@ -23,27 +27,20 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
+<!--    <a href="">-->
+        {% block login %}
 
-    {%block login%}
-                {% if user.is_authenticated%}
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                      <a href="{% url 'logout' %}"> Logout </a>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                      <a href="{% url 'myFirstApp:profile' %}">{{user.username}}</a>
-                </ul>
+    <a href="{%url 'movies:profile'%}">
+{% if user.is_authenticated %}
+  Hi {{ user.username }}!
+  <p><a href="{% url 'logout' %}">logout</a></p>
+{% else %}
+  <p>You are not logged in</p>
+  <a href="{% url 'login' %}">login</a>
+{% endif %}
+{% endblock %}
+</a>
 
-                {%else%}
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                      <a href="{% url 'login'%}">Login</a>
-                    </li>
-                    <li><a href="{% url 'myFirstApp:registration'%}"> Registration </a> </li>
-                </ul>
-                {%endif%}
-                {%endblock%}
 
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
@@ -52,14 +49,12 @@
     </form>
 </header>
 
-    <div>
 
     {% block content %}
 
     some text...
-
 {% endblock %}
-        </div>
+
 </body>
 <script src="{% static 'js/script.js' %}"></script>
 </html>
