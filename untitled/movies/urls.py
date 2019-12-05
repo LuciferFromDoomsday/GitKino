@@ -11,7 +11,9 @@ urlpatterns = [
 
     path('search/', views.search, name='search'),
 path('signup/' , views.signup , name = 'signup'), #/register
-path('login/' , views.log_in , name = 'log_in') #/login
+path('login/' , views.log_in , name = 'log_in') #/login,
+    ,
+path('profile/' , views.profile , name = 'profile')
     
 ]
 

@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+  {% extends "home.html" %}
 
-</body>
-</html>
+  {% block content %}
+  {%if user %}
+  <br>
+  <p>Name: {{user.username}}</p>
+  <p>Email: {{user.email}}</p>
+  <p>User Image: <img src="{{user.userImg.url}}" alt="" width="200" height="200"></p>
+  <p>Dob: {{user.last_login}}</p>
+  <p>Password: {{user.password}}</p>
+  {%else%}
+  <p>{{user}}</p>
+  {% endif %}
+  {% endblock %}
