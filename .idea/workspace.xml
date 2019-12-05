@@ -4,8 +4,6 @@
     <list default="true" id="067e6074-158d-4976-8481-f8454f1d669b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/templates/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled/templates/registration/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/templates/registration/login.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled/templates/registration/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/untitled/templates/registration/signup.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -82,7 +80,7 @@
       <updated>1572604832978</updated>
       <workItem from="1572604848914" duration="898000" />
       <workItem from="1575021758269" duration="2500000" />
-      <workItem from="1575568786636" duration="9669000" />
+      <workItem from="1575568786636" duration="13503000" />
     </task>
     <servers />
   </component>
