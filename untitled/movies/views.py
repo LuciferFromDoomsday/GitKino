@@ -97,3 +97,8 @@ def log_in(request):
 
 def profile(request):
     return render(request, "registration/user_profile.html")
+
+
+def my_logout(request):
+    redirect('home.html')
+    return auth_views.logout(request)

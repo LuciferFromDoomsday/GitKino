@@ -5,7 +5,15 @@
     {% load static %}
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
+
+    <link href="{% static 'css/style.css'%}?20191205" rel="stylesheet" type="text/css">
+
     <link href="{% static 'css/style.css'?20191205 %}" rel="stylesheet" type="text/css">
+
+    <link href="{% static 'css/style.css' %}?20191205" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+
+
 </head>
 <body>
 {% csrf_token %}
@@ -39,7 +47,7 @@
     <a href="{%url 'movies:profile'%}"> {% block login %}
 {% if user.is_authenticated %}
   Hi {{ user.username }}!
-  <p><a href="{% url 'logout' %}">logout</a></p>
+  <p><a href="{% url 'movies:my_logout' %}">logout</a></p>
 {% else %}
   <p>You are not logged in</p>
   <a href="{% url 'login' %}">login</a>
