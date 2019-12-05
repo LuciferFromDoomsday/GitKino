@@ -1,27 +1,38 @@
+ {% extends "index.html" %}
 
-{% block content %}
 
-<h2>Регистрация</h2>
-<form method="post">
+{% load staticfiles %}
+ {% block content %}
+<head>
+
+  <title>Registration
+</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="{% static 'css/userReg.css' %}" rel="stylesheet" type="text/css">
+  </head>
+
+<form class = "box" action="signup.html" method="post">
+  <h2>Sign up</h2>
 {% csrf_token %}
 {% for field in form %}
 <p>
-  {{ field.label_tag }}<br>
-  {{ field }}
+ <div class="a" >{{ field.label_tag }}
+   </div>
+
+
+  <br>
+ <div class="b" > {{ field }}</div>
   {% if field.help_text %}
-  <span>{{ field.help_text }}</span>
+<!--  <span>{{ field.help_text }}</span>-->
   {% endif %}
   {% for error in field.errors %}
   <p>{{ error }}</p>
   {% endfor %}
 </p>
 {% endfor %}
-<button type="submit">Отправить</button>
+<button type="submit">Register</button>
 </form>
-
-
-
-
 {% endblock %}
 
 
