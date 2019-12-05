@@ -13,7 +13,7 @@
 </head>
 <body>
 {% csrf_token %}
-<header>
+<header id="head">
     <h1>MovieDreamers</h1>
     <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
         <div class="hiden"></div>
@@ -27,7 +27,7 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
-    <a href="">
+<!--    <a href="">-->
         {% block login %}
 
     <a href="{%url 'movies:profile'%}">

@@ -1,14 +1,18 @@
 <html>
 
 <head>
+
     {% load static %}
     <meta charset="UTF-8">
     <title>MovieDreamers</title>
-    <link href="{% static 'css/style.css' %}?20191115" rel="stylesheet" type="text/css">
-     <link href="{% static 'css/bootstrap.css' %}?20191115" rel="stylesheet" type="text/css">
-</head>
 
+    <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
+
+
+
+</head>
 <body>
+{% csrf_token %}
 <header>
     <h1>MovieDreamers</h1>
     <a class="h_icon" href="#" id="film"><img alt="film_icon" src="{% static 'img/film.png' %}">
@@ -23,8 +27,8 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
-
-   {% block login %}
+<!--    <a href="">-->
+        {% block login %}
 
     <a href="{%url 'movies:profile'%}">
 {% if user.is_authenticated %}
@@ -35,6 +39,8 @@
   <a href="{% url 'login' %}">login</a>
 {% endif %}
 {% endblock %}
+</a>
+
 
   <form id="content" action="{%url 'movies:search'%}"  method="post">
         {% csrf_token %}
@@ -43,14 +49,12 @@
     </form>
 </header>
 
-    <div>
 
     {% block content %}
 
     some text...
-
 {% endblock %}
-        </div>
+
 </body>
 <script src="{% static 'js/script.js' %}"></script>
 </html>
