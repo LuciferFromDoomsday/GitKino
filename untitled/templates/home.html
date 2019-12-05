@@ -27,7 +27,8 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a>
-    <a href=""> {% block login %}
+    <a href="">
+        {% block login %}
 
     <a href="{%url 'movies:profile'%}">
 {% if user.is_authenticated %}
