@@ -17,10 +17,15 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 PROJECT_ROOT =os.path.dirname(__file__)
 #gmail send verification
-EMAIL_USE_TLS =True
-EMAIL_HOST_USER = "MovieDreamers@gmail.com"
+EMAIL_USE_SSL =True
+EMAIL_USE_TLS =False
+EMAIL_HOST_USER = "ayannaimankhan@gmail.com"
+EMAIL_HOST_PASSWORD = "Superpassword"
 EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'you@domain.com'
+EMAIL_HOST = 'smtp.hushmail.com'
 
+# EMAIL_BACKEND = 'django.core.mail.backends.stmp.EmailBackend'
 
 
 # Quick-start development settings - unsuitable for production
@@ -137,3 +142,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
+LOGOUT_REDIRECT_URL = 'home'

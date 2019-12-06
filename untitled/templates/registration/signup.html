@@ -13,24 +13,26 @@
   <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
   </head>
 
-<form class = "box" action="signup.html" method="post">
+<form class = "box" action="{%url 'movies:signup'%}" method="post">
+
   <h2>Sign up</h2>
-{% csrf_token %}
-{% for field in form %}
-<p>
- {{ field.label_tag }}
-   <br>
- <div class="b" > {{ field }}</div>
-  {% if field.help_text %}
-<!--  <span>{{ field.help_text }}</span>-->
-  {% endif %}
-  {% for error in field.errors %}
-  <p>{{ error }}</p>
-  {% endfor %}
-</p>
-{% endfor %}
-<button type="submit">Register</button>
-</form>
+  <form method="post">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="display: none">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+
 {% endblock %}
 
 

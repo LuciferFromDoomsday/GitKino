@@ -1,4 +1,4 @@
- {% extends "index.html" %}
+
 
 
   {% block content %}
@@ -19,7 +19,7 @@
 
 <body>
 
-<form class = "box" action="login.html" method="post">
+<form class = "box" action="{%url 'login'%} " method="post">
 <h2>Login</h2>
   {% csrf_token %}
   {{ form.as_p }}

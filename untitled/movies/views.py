@@ -82,26 +82,7 @@ def search(request):
 #         return auth_views.signin(request)
 
 
-def log_in(request):
-    print("LOGED")
 
-    username = request.POST.get("username")
-    my_password = request.POST.get("pass")
-    print(username)
-    print(my_password)
-    user = authenticate(username=username, password=my_password)
-    if user is not None:
-        print("cond 1")
-        if user.is_active:
-            login(request, user)
-            print("cond 2")
-            return redirect('home.html')
-        else:
-            print("else 2")
-            return render(request, 'registration/login.html')
-    else:
-        print("else 1")
-        return render(request, 'registration/login.html')
 
 
 def profile(request):
@@ -128,7 +109,7 @@ def signup(request):
             user.save()
             current_site = get_current_site(request)
             mail_subject = 'Activate your blog account.'
-            message = render_to_string('acc_active_email.html', {
+            message = render_to_string('registration/acc_active_html.html', {
                 'user': user,
                 'domain': current_site.domain,
                 'uid':urlsafe_base64_encode(force_bytes(user.pk)),
@@ -158,3 +139,5 @@ def activate(request, uidb64, token):
         return HttpResponse('Thank you for your email confirmation. Now you can login your account.')
     else:
         return HttpResponse('Activation link is invalid!')
+
+# def logout(request):
