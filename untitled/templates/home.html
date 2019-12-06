@@ -64,7 +64,18 @@
 
 
 {% endblock %}
+    {%block content%}
+    {% if cities_list %}
+            hi
+        {%for city in cities_list%}
+            {{city.name}}
+        {%endfor%}
+    {%else%}
+    no
+    {%endif%}
+    {%endblock%}
 </div>
+
 </body>
 <script src="{% static 'js/script.js' %}"></script>
 <footer>
