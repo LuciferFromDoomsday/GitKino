@@ -60,9 +60,20 @@
 
     {% block content %}
 
-    some text...
+    <form action="{%url movies:cities_list%}">
+        {{if citiest_list}}
+            {{for city in cities_list}}
+                    {{city.city_name}}
+            {{endfor}}
+        {{endif}}
+
+
+    </form>
 {% endblock %}
 </div>
 </body>
 <script src="{% static 'js/script.js' %}"></script>
+<footer>
+
+  </footer>
 </html>

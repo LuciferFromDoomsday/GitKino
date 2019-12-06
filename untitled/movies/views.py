@@ -1,14 +1,14 @@
 from django.shortcuts import render , redirect
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
-from .models import Movie, Comment
+from .models import Movie, Comment,Cities,Cinema,Ticket
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import SignUpForm
 from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
 from django.conf import settings
-
+from django.http import HttpResponse, HttpResponseNotFound
 def index(request):
     latest_movies_list = Movie.objects.order_by('movie_published_date')[:12]
     print(latest_movies_list[0].movie_title)
@@ -70,8 +70,8 @@ def signup(request):
     login(request, user)
     return render(request, 'home.html', {'user':user})
   else:
-    form = SignUpForm()
-    return render(request, 'registration/signup.html', {'form': form})
+
+    return auth_views.signin(request)
   
   
 
@@ -104,3 +104,10 @@ def profile(request):
 def my_logout(request):
     redirect('home.html')
     return auth_views.logout(request)
+
+
+
+def cities_list(requets):
+     cities_list = Cities.objects.order_by('id')[:20]
+     return HttpResponse(cities_list)
+     
