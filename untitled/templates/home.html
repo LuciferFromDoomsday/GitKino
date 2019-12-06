@@ -1,4 +1,4 @@
-<html>
+<html lang="lul">
 
 <head>
 
@@ -7,8 +7,6 @@
     <title>MovieDreamers</title>
 
     <link href="{% static 'css/style.css'%}?20191205" rel="stylesheet" type="text/css">
-
-
 
 </head>
 <body>
@@ -27,11 +25,15 @@
     <a class="h_icon" href="#" id="list"><img alt="list_icon" src="{% static 'img/list.png' %}">
         <div class="hiden"></div>
     </a
-    <form>
-        <select>
+     <form method="POST" action="CityListView/">
+         <label>
+             <select>
+                 <option></option>
+             </select>
+         </label>
 
-        </select>
-    </form>
+
+     </form>
         {% block login %}
 
 
@@ -60,15 +62,7 @@
 
     {% block content %}
 
-    <form action="{%url movies:cities_list%}">
-        {{if citiest_list}}
-            {{for city in cities_list}}
-                    {{city.city_name}}
-            {{endfor}}
-        {{endif}}
 
-
-    </form>
 {% endblock %}
 </div>
 </body>

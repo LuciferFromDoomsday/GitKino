@@ -1,7 +1,7 @@
-from django.shortcuts import render , redirect
+from django.shortcuts import render, redirect
 from django.http import Http404, HttpResponseRedirect
 from django.urls import reverse
-from .models import Movie, Comment,Cities,Cinema,Ticket
+from .models import Movie, Comment, City, Cinema, Ticket
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib import messages
 from .forms import SignUpForm
@@ -9,6 +9,8 @@ from django.contrib.auth import authenticate, login
 from django.core.mail import send_mail
 from django.conf import settings
 from django.http import HttpResponse, HttpResponseNotFound
+from django.views import generic
+
 def index(request):
     latest_movies_list = Movie.objects.order_by('movie_published_date')[:12]
     print(latest_movies_list[0].movie_title)
@@ -23,8 +25,7 @@ def detail(request, movie_id):
 
     latest_comment_list = m.comment_set.order_by('-id')[:10]
 
-
-    return render(request, 'movies/detail.html', {'movie': m , 'latest_comment_list': latest_comment_list})
+    return render(request, 'movies/detail.html', {'movie': m, 'latest_comment_list': latest_comment_list})
 
 
 def leave_comment(request, movie_id):
@@ -33,68 +34,60 @@ def leave_comment(request, movie_id):
     except:
         raise Http404("No such movie")
 
-    m.comment_set.create(author_name= user.username , comment_text=request.POST['text'])
+    m.comment_set.create(author_name=user.username, comment_text=request.POST['text'])
 
-    return HttpResponseRedirect( reverse('movies:detail' , args =(m.id,)))
-
-
-
-
+    return HttpResponseRedirect(reverse('movies:detail', args=(m.id,)))
 
 
 def search(request):
-    
-        search_res = []
-        if request.method == "POST":
-            print("Post worked ")
-            movie_description = request.POST.get("input")
-            print(movie_description)
-            if len(movie_description) > 0:
-                search_res = Movie.objects.filter(movie_title__contains=movie_description)
-                print(search_res)
-                print(search_res[0].movie_imdb)
-            return render(request, "movies/search.html",
-                        {"search_res" : search_res , "empty_res":"There is no such movie1"})
-
+    search_res = []
+    if request.method == "POST":
+        print("Post worked ")
+        movie_description = request.POST.get("input")
+        print(movie_description)
+        if len(movie_description) > 0:
+            search_res = Movie.objects.filter(movie_title__contains=movie_description)
+            print(search_res)
+            print(search_res[0].movie_imdb)
+        return render(request, "movies/search.html",
+                      {"search_res": search_res, "empty_res": "There is no such movie1"})
 
 
 def signup(request):
-  if request.method == 'POST':
-    form = SignUpForm(request.POST)
-    if form.is_valid():
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+        username = form.cleaned_data.get('username')
+        my_password = form.cleaned_data.get('password1')
+        user = authenticate(username=username, password=my_password)
+        login(request, user)
+        return render(request, 'home.html', {'user': user})
+    else:
 
-        form.save()
-    username = form.cleaned_data.get('username')
-    my_password = form.cleaned_data.get('password1')
-    user = authenticate(username=username, password=my_password)
-    login(request, user)
-    return render(request, 'home.html', {'user':user})
-  else:
+        return auth_views.signin(request)
 
-    return auth_views.signin(request)
-  
-  
 
 def log_in(request):
-        print("LOGED")
+    print("LOGED")
 
-        username = request.POST.get("username")
-        my_password = request.POST.get("pass")
-        print(username)
-        print(my_password)
-        user = authenticate(username=username, password=my_password)
-        if user is not None:
-            print("cond 1")
-            if user.is_active:
-                login(request,user)
-                print("cond 2")
-                return redirect('home.html')
-            else:
-                print("else 2")
-                return render(request, 'registration/login.html')
+    username = request.POST.get("username")
+    my_password = request.POST.get("pass")
+    print(username)
+    print(my_password)
+    user = authenticate(username=username, password=my_password)
+    if user is not None:
+        print("cond 1")
+        if user.is_active:
+            login(request, user)
+            print("cond 2")
+            return redirect('home.html')
         else:
-              print("else 1")
-              return render(request , 'registration/login.html' )
+            print("else 2")
+            return render(request, 'registration/login.html')
+    else:
+        print("else 1")
+        return render(request, 'registration/login.html')
 
 
 def profile(request):
@@ -106,8 +99,10 @@ def my_logout(request):
     return auth_views.logout(request)
 
 
+def create(request):
+    if request.method == "POST":
+        tom = Cities()
+        tom.name = request.POST.get("name")
+        tom.save()
+    return HttpResponseRedirect("/")
 
-def cities_list(requets):
-     cities_list = Cities.objects.order_by('id')[:20]
-     return HttpResponse(cities_list)
-     

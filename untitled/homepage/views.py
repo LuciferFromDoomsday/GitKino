@@ -14,3 +14,7 @@ def home(request):
 #     return render(request,'homepage/templates/registration/register.html', {'form':form})
 
 
+
+def cities_list(request):
+    city_list = City.objects.order_by('id')[:20]
+    return render(request, 'home.html', {'city_list': city_list})
