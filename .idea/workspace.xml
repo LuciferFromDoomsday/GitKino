@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="067e6074-158d-4976-8481-f8454f1d669b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
       <change beforePath="$PROJECT_DIR$/untitled/movies/migrations/0004_movie_rating.py" beforeDir="false" />
     </list>
 
@@ -25,6 +26,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1T0lKts539goPMj7t5YHrVyswYk" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -35,18 +41,6 @@
       <recent name="C:\Users\asus\Documents\GitHub\GitKino\GitKino\untitled\templates" />
       <recent name="C:\Users\asus\Documents\GitHub\GitKino\GitKino\untitled" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
     <configuration name="manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -77,6 +71,18 @@
       </list>
     </recent_temporary>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -94,9 +100,8 @@
 
 
       <workItem from="1575568786636" duration="2586000" />
-
       <workItem from="1575568786636" duration="9669000" />
-
+      <workItem from="1575585622048" duration="158000" />
     </task>
     <servers />
   </component>
