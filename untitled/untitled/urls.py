@@ -25,5 +25,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('signup/' , movies_views.signup , name = 'signup'),
     path('accounts/', include('django.contrib.auth.urls')),
-    path('', include('homepage.urls'))
+    path('', movies_views.home , name = 'home')
 ]
