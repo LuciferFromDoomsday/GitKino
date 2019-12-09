@@ -1,0 +1,41 @@
+ {% extends "index.html" %}
+
+
+{% load staticfiles %}
+ {% block content %}
+<head>
+
+  <title>Registration
+</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+  <link href="{% static 'css/userReg.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" type="text/css">
+  </head>
+
+<form class = "box" action="{%url 'movies:signup'%}" method="post">
+
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="display: none">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <button type="submit">Sign up</button>
+  </form>
+
+{% endblock %}
+
+
+
+
+
