@@ -1,0 +1,89 @@
+
+{% block title %}{{movie.movie_title}}{% endblock %}
+<head>
+{% load staticfiles %}
+     <link rel="stylesheet" href="{%static 'css/Featured-Movies-1.css'%}?20191212">
+      <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+</head>
+{% block content %}
+
+    <img src='{{ movie.movie_picture_url }}'>
+
+   <h2>{{movie.movie_title}}</h2>
+
+    <p>{{ movie.movie_description | safe }}</p>
+
+
+   <p>{{ movie.get_rating_display}}</p>
+
+
+    <em>{{ movie.movie_published_date}}</em>
+    <hr>
+{% if latest_comment_list %}
+    {% for a in latest_comment_list %}
+        <p>
+        <strong>{{ a.author_name }}</strong>
+        <p>{{a.comment_text}}</p>
+        </p>
+{% endfor %}
+    {% else %}
+    Comments didn't find ! Be the first!)
+
+    {% endif %}
+    <hr>
+{% if user.is_authenticated %}
+    <form action="{% url 'movies:leave_comment' movie.id %}" method="POST">
+
+    {% csrf_token %}
+
+
+
+    <textarea name="text" required = "" placeholder="Your text" cols = "30" rows = "10"></textarea><br>
+
+    <button type ="submit"> Leave comment </button>
+    </form>
+{%else%}
+To leave comment please sign up first!
+
+{%endif%}
+<p >Session with this movie</p>
+<div class = "container-name">
+    <form class="row" >
+
+<div class="element1 col-md-5">
+
+         {%for cinema in cinemas %}
+         <ol>
+             <li value = "{{forloop.counter}}">
+                 {{cinema.cinema_name}}
+                 {{cinema.cinema_adress}}
+             </li>
+         </ol>
+
+         {%endfor%}
+
+     </div>
+
+         <div class="element2 col-md-7">
+         {%for session in sessions%}
+
+         <ol>
+
+             Дата:{{session.session_date}}
+            Время:{{session.session_time}}
+            Зал:{{session.session_hall}}
+
+             <form action="{%url 'movies:buy_ticket' session.id%}" method="post">
+             {% csrf_token %}
+<button method = 'POST' type="submit">Buy ticket</button>
+             </form>
+
+         </ol>
+
+
+         {%endfor%}
+             </div>
+</form>
+</div>
+
+{% endblock %}
